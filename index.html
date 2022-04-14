@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>gulp-scss-starter</title>
+        <meta name="theme-color" content="#fff">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <link rel="icon" sizes="16x16" href="img/favicon-16x16.png" type="image/png">
+        <link rel="icon" sizes="32x32" href="img/favicon-32x32.png" type="image/png">
+        <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png">
+        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="img/apple-touch-icon-167x167.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon-180x180.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="img/apple-touch-icon-1024x1024.png">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.min.css"/>
+
+        <link rel="stylesheet" href="styles/main.min.css">
+    </head>
+    <body>
+        <header>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-3 d-lg-none"> <button class="mobile-menu-icon"><span></span><span></span><span></span></button>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="d-flex align-items-center justify-content-center justify-content-lg-start"> <a href="/"
+            id="main-logo"> <svg class="mr-lg-3 main-logo flex-shrink-0" width="88" height="24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.851 17.498h2.51c-.174 1.172-.692 2.113-1.555 2.823-.852.71-1.942 1.065-3.27 1.065-1.737 0-3.097-.543-4.08-1.63C.487 18.66 0 17.214 0 15.417c0-1.796.491-3.237 1.473-4.324.982-1.097 2.336-1.645 4.063-1.645 1.263 0 2.315.328 3.157.984.842.645 1.36 1.506 1.554 2.581H7.72c-.27-.946-.998-1.42-2.185-1.42-.993 0-1.753.36-2.282 1.082-.518.71-.777 1.624-.777 2.742 0 1.12.259 2.039.777 2.76.529.71 1.29 1.064 2.282 1.064.615 0 1.123-.15 1.522-.451.41-.312.674-.743.793-1.291zm14.161-7.842v2.114h-3.594v9.407h-2.412V11.77h-3.593V9.656h9.599zm6.678 5.164h.453l2.444-5.164h2.444l-5.536 11.52h-2.412l1.651-3.452-4.273-8.068h2.525l2.703 5.163zm16.474 4.21h1.65V24h-2.346v-2.823h-7.592V24h-2.347v-4.97h1.197c.918-1.624 1.376-3.904 1.376-6.84V9.656h8.062v9.375zm-2.348 0v-7.228h-3.48v1.017c0 2.689-.388 4.76-1.165 6.212h4.645zm6.74-9.374h2.25v8.035h.42l4.161-8.035h3.254v11.52h-2.267v-8.212h-.42l-4.258 8.213h-3.14V9.657zm14.781 11.521V9.657h2.412v4.501h2.735l2.12-4.502h2.494l-2.59 5.6 2.735 5.92h-2.492l-2.25-4.84h-2.752v4.84h-2.412zm21.219 0l-.94-3.114h-4.402l-.94 3.114h-2.379l3.675-11.52h3.74L88 21.176h-2.444zm-3.513-9.213l-1.214 4.001h3.14l-1.214-4.001h-.712zM38.158 0H35.63l-3.035 6.05h2.53L38.157 0z"
+                fill="#222"></path>
+            </svg> </a>
+          <div class="pc-city-container d-none d-lg-block" data-city-path="moskva">
+            <div class="pc-change-city d-flex align-items-center justify-content-center"> <i
+                class="fa fa-location-arrow city-icon flex-shrink-0"></i> <span> <span data-type="city"
+                  data-id="4">Москва</span> </span> </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 order-last order-lg-0 mt-3 mt-lg-0 d-none d-lg-block">
+        <div class="header-search" id="main-search"> <svg class="head-search-icon" width="17" height="17"
+            viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M1.7 7.64999C1.7 4.3639 4.36391 1.7 7.65001 1.7C10.9361 1.7 13.6 4.3639 13.6 7.64999C13.6 9.25281 12.9662 10.7076 11.9356 11.7774C11.9063 11.7999 11.8781 11.8246 11.8513 11.8515C11.8245 11.8783 11.7998 11.9065 11.7773 11.9358C10.7075 12.9663 9.25274 13.6 7.65001 13.6C4.36391 13.6 1.7 10.9361 1.7 7.64999ZM12.4249 13.6272C11.1162 14.674 9.45622 15.3 7.65001 15.3C3.42502 15.3 0 11.875 0 7.64999C0 3.42502 3.42502 0 7.65001 0C11.875 0 15.3 3.42502 15.3 7.64999C15.3 9.4563 14.674 11.1164 13.627 12.4251L16.7509 15.549C17.0828 15.8809 17.0828 16.4191 16.7509 16.751C16.4189 17.083 15.8807 17.083 15.5488 16.751L12.4249 13.6272Z"
+              fill="#A7A7A7"></path>
+          </svg> <input class="head-search" type="text" placeholder="Учебное заведение, специальность или профессия"
+            autocomplete="off"> <svg class="head-search-clear" width="14" height="14" viewBox="0 0 14 14" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+              fill="#A7A7A7"></path>
+          </svg>
+          <div class="autocomplete-suggestions"
+            style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div>
+        </div>
+      </div>
+      <div class="col-3 col-lg-3 d-flex align-items-center justify-content-end" id="main-user"> <a class="head-favorite"
+          href="https://studika.ru/favorites"> <i class="fa fa-heart"></i> 0 </a> <a href="javascript:;"
+          class="btn btn-login ml-3 d-none d-lg-flex">Войти</a> </div>
+    </div>
+    <nav class="header-menu d-none d-lg-block" id="main-menu">
+      <ul class="main-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement" style="overflow: visible;">
+        <li><a itemprop="url" href="https://studika.ru/moskva/vuzy">Вузы</a></li>
+        <li><a itemprop="url" href="https://studika.ru/moskva/kolledzhi">Колледжи</a></li>
+        <li><a itemprop="url" href="https://studika.ru/moskva/tehnikumy">Техникумы</a></li>
+        <li><a itemprop="url" href="https://studika.ru/moskva/uchilischa">Училища</a></li>
+        <li><a itemprop="url" href="https://studika.ru/moskva/specialnosti">Специальности</a>
+          <div class="sub-menu-b">
+            <ul class="sub-menu">
+              <li><a itemprop="url" href="https://studika.ru/moskva/specialnosti/vyssee">Высшее</a></li>
+              <li><a itemprop="url" href="https://studika.ru/moskva/specialnosti/srednee">Среднее</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a itemprop="url" href="https://studika.ru/moskva/professii">Профессии</a></li>
+        <li> <a itemprop="url" href="https://studika.ru/catalog/distancionnoe-obucenie">Дистанционное обучение</a>
+          <div class="sub-menu-b">
+            <ul class="sub-menu">
+              <li><a itemprop="url" href="https://studika.ru/catalog/distantsionnye-kolledzhi-tekhnikumy">Дистанционные
+                  колледжи</a></li>
+              <li><a itemprop="url" href="https://studika.ru/catalog/vyssee-obrazovanie-distancionno">Дистанционные
+                  вузы</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a itemprop="url" href="https://studika.ru/otzyvi">Отзывы</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="mobile-search-container">
+    <div class="container"> <button class="m-change-city"> <span> <span data-type="city" data-id="4">Москва</span>
+        </span> <i class="fa fa-location-arrow"></i> </button> </div>
+    <div class="m-type-search">
+      <div class="m-type-tabs">
+        <div class="container">
+          <ul>
+            <li class="m-formular-11 active" data-id="#tab_1" data-type="1">Высшее</li>
+            <li class="m-formular-11" data-id="#tab_2" data-type="2">Среднее</li>
+          </ul>
+        </div>
+      </div>
+      <div class="m-tab-items">
+        <div class="container">
+          <div class="m-tab-item active" id="tab_1">
+            <ul>
+              <li data-type="vuzy" data-url="https://studika.ru/moskva/vuzy">Вузы</li>
+              <li data-type="specialnosti">Специальности</li>
+            </ul>
+          </div>
+          <div class="m-tab-item" id="tab_2">
+            <ul>
+              <li data-type="kolledzhi" data-url="https://studika.ru/moskva/kolledzhi">Колледжи</li>
+              <li data-type="tehnikumy" data-url="https://studika.ru/moskva/tehnikumy">Техникумы</li>
+              <li data-type="uchilischa" data-url="https://studika.ru/moskva/uchilischa">Училища</li>
+              <li data-type="specialnosti">Специальности</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+        <div class="page">
+  <div class="container">
+
+    <div class="page__nav">
+      <div class="nav">
+        <a class="nav__link" href="#">Москва</a>
+        <div class="nav__arrow"></div>
+        <a class="nav__link" href="#">Высшее образование</a>
+        <div class="nav__arrow"></div>
+        <a class="nav__link" href="#">Вузы</a>
+        <div class="nav__arrow"></div>
+        <a class="nav__link" href="#">МГТУ им. Н.Э. Баумана</a>
+      </div>
+      <div class="nav__mb">
+        <div class="nav__arrow nav__arrow-mb"></div>
+        <a class="nav__link nav__link-mb" href="#">Назад</a>
+      </div>
+    </div> <!-- /.page__nav -->
+  </div> <!-- /.container -->
+  
+  <div class="container container-mb">
+    <div class="page__promo">
+      <div class="promo">
+        <img class="promo__img" src="img/Baumana-main.png" alt="Baumana-main">
+        <img class="promo__logo" src="img/logo-promo.png" alt="logo-promo">
+        <div class="promo__button button">
+          <button class="button__btn button__btn-review">оставить отзыв</button>
+          <button class="button__btn button__btn-check">проверить шансы поступить</button>
+        </div>
+      </div>
+      <div class="cancel__block-mb">
+        <img class="cancel__block-mb-enter"  src="img/cancel1.svg" alt="cancel">
+        <img src="img/cancel2.svg" alt="cancel">
+      </div>
+    </div>
+  </div> <!-- /.container -->
+<div class="container container__information-block">
+  <div class="information__block__mb">
+    <h2 class="block__mb-text">
+      Московский государственный технический университет имени Н.Э. Бáумана
+    </h2>
+    <p class="block__mb-address">Москва, ул. Новочеремушкинская, д. 69</p>
+    <p class="block__mb-tel">Приемная комиссия: <a class="tel-link" href="tel:+74991812133">7 (499) 181 21 33</a></p>
+    <div class="block__mb-rating"><img src="img/star.svg" alt="star"><span class="mb-rating-nimber">2.4</span><span class="mb-rating-reviews">(75 отзывов)</span></div>
+  </div>
+</div> <!-- /.container -->
+
+  <div class="container">
+    <div class="page__information information">
+
+      <div class="information__list">
+        <ul class="list__item">
+          <li class="item__name">
+            <a class="item__name-link"><p class="item__name-text">Основная информация</p><span class="item__name-number">100</span></a>
+          </li>
+          <li class="item__name">
+            <a class="item__name-link"><p class="item__name-text">Специальности</p><span class="item__name-number">100</span></a>
+          </li>
+          <li class="item__name">
+            <a class="item__name-link"><p class="item__name-text">Об университете</p><span class="item__name-number">100</span></a>
+          </li>
+          <li class="item__name">
+            <a class="item__name-link"><p class="item__name-text">Контакты</p><span class="item__name-number">100</span></a>
+          </li>
+          <li class="item__name">
+            <a class="item__name-link"><p class="item__name-text">Отзывы</p><span class="item__name-number">100</span></a>
+          </li>
+          <li class="item__name">
+            <a class="item__name-link"><p class="item__name-text">Преподаватели</p><span class="item__name-number">100</span></a>
+          </li>
+          <li class="item__name">
+            <a class="item__name-link"><p class="item__name-text">Профессии</p><span class="item__name-number">100</span></a>
+          </li>
+          <li class="item__name">
+            <a class="item__name-link"><p class="item__name-text">Новости</p><span class="item__name-number">100</span></a>
+          </li>
+          <li class="item__name">
+            <a class="item__name-link"><p class="item__name-text">Задать вопрос</p><span class="item__name-number">100</span></a>
+          </li>
+          <li class="item__name">
+            <a class="item__name-link"><p class="item__name-text">Часто задаваемые вопросы</p><span class="item__name-number">100</span></a>
+          </li>
+        </ul>
+      </div> <!-- /.information__list -->
+
+      <div class="information__main">
+
+        <div class="information__list-mb">
+          <p class="information__list-mb-update">Обновлено 11.11.2011</p>
+          <p class="information__list-mb-error"><a class="error-link" href="">Сообщить об ошибке</a></p>
+        </div>
+
+        <h2 class="main__text">Основная информация</h2>
+        <div class="main__place">
+
+          <div class="stats__place">
+            <div class="place__paid">
+              <div class="stats__number">4 532</div>
+              <p class="stats__text">платных мест</p>
+            </div>
+            <div class="place__free">
+              <div class="stats__number">1 702</div>
+              <p class="stats__text">бюджетных мест</p>
+            </div>
+          </div> <!-- /.place__educational -->
+
+          <div class="stats__rating">
+            <div class="rating__city">
+              <div class="stats__number">1 место</div>
+              <p class="stats__text">в Санкт-Петербурге</p>
+            </div>
+            <div class="rating__country">
+              <div class="stats__number">12 место</div>
+              <p class="stats__text">в РФ</p>
+            </div>
+          </div> <!-- /.place__country -->
+
+        </div>
+
+        <div class="features-and-access">
+
+          <div class="features">
+            <ul class="features__list">
+              <li class="features__list-item">
+                <p class="features__list-item-text">Государственный</p>
+                <img class="features__list-item-img" src="img/check.svg" alt="check">
+              </li>
+              <li class="features__list-item">
+                <p class="features__list-item-text">Общежитие</p>
+                <img class="features__list-item-img" src="img/no-check.svg" alt="no-check">
+              </li>
+              <li class="features__list-item">
+                <p class="features__list-item-text">Военная кафедра</p>
+                <img class="features__list-item-img" src="img/check.svg" alt="check">
+              </li>
+            </ul>
+          </div> <!-- /.features -->
+
+          <div class="access">
+            <p class="access__text">Вы представитель УЗ?</p>
+            <button class="access__btn">получить доступ</button>
+          </div> <!-- /.access -->
+
+        </div> <!-- /.features-and-access -->
+
+        <div class="passing-score">
+
+          <h3 class="passing-score__text">Проходной балл</h3>
+
+          <div class="passing-score__diagram">
+            <canvas style="background: #FFFFFF;"  id="myChart"></canvas>
+          </div>
+
+        </div> <!-- /.passing-score -->
+
+        <div class="specialty swiper">
+          <div class="specialty-block">
+            <div class="specialty__text">
+              <h2>Специальности</h2>
+              <span class="specialty__span">432 специальности</span>
+            </div>
+            <p class="specialty__text-name">Специальности МГТУ им. Н. Э. Баумана</p>
+          </div>
+          <ul class="specialty__list">
+            <li class="specialty__list-item">Сортировать:</li>
+            <li class="specialty__list-item">
+              <p>по оплате в год</p>
+              <div class="block-lines">
+                <span class="item__line item__line1"></span>
+                <span class="item__line item__line2"></span>
+                <span class="item__line item__line3"></span>
+              </div>
+            </li>
+            <li class="specialty__list-item specialty__list-item-noactiv">по отзывам</li>
+            <li class="specialty__list-item specialty__list-item-noactiv">по проходному баллу</li>
+            <li class="specialty__list-item specialty__list-item-noactiv">по количнству бюджетных мест</li>
+          </ul>
+          <div class="cards_wrapper swiper-wrapper">
+            <div class="educational__card swiper-slide">
+              <div class="educational__card-img">
+                <a href="#"> <img class="card-img" src="img/card-photo.png" alt="card-photo"> </a>
+              </div>
+              <div class="educational__card-info">
+                <div class="educational__card-text">
+                  <div class="educational__card-block">
+                    <div class="category">бакалавриат · 01.03.00 </div>
+                    <a class="h4" href="#">Прикладная математика и информатика</a>
+                    <div class="speciality-card-badges">
+                      <a href="#" class="s-badge">Очно</a>
+                      <a href="#" class="s-badge">Заочно</a>
+                      <a href="#" class="s-badge">Очно-заочно</a>
+                      <a href="#" class="s-badge">Дистанционно</a>
+                    </div>
+                    <div class="educational__card-specialities">
+                      <div class="educational__card-specialities">
+                        Программное обеспечение вычислительных систем ·
+                        Математическое и программное обеспечение защиты информации ·
+                        Экономика · Организация педагогическо...
+                      </div>
+                    </div>
+                    <a class="link" href="#">Все 43 профиля</a>
+                  </div>
+                </div>
+              </div>
+              <div class="educational__card-info-line"></div>
+              <div class="educational__card-data">
+                <div class="educational__card-icons">
+                  <img src="img/dorm.svg" alt="dorm" class="educational__icon">
+                  <img src="img/gos.svg" alt="gos" class="educational__icon">
+                  <img src="img/war.svg" alt="war" class="educational__icon">
+                </div>
+                <div class="speciality__card-money">
+                  <div class="speciality__card-price">
+                    <div class="descriptor">Бюджетных мест</div>
+                    <div class="descriptor__num">260</div>
+                  </div>
+                  <div class="speciality__card-price">
+                    <div class="descriptor">Проходной балл</div>
+                    <div class="descriptor__num">от 152</div>
+                  </div>
+                  <div class="speciality__card-price">
+                    <div class="descriptor">Оплата в год</div>
+                    <div class="descriptor__num">от 90 000 ₽</div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- /.educational-card -->
+
+            <div class="educational__card swiper-slide">
+              <div class="educational__card-img">
+                <a href="#"> <img class="card-img" src="img/card-photo.png" alt="card-photo"> </a>
+              </div>
+              <div class="educational__card-info">
+                <div class="educational__card-text">
+                  <div class="educational__card-block">
+                    <div class="category">бакалавриат · 01.03.00 </div>
+                    <a class="h4" href="#">Прикладная математика и информатика</a>
+                    <div class="speciality-card-badges">
+                      <a href="#" class="s-badge">Очно</a>
+                      <a href="#" class="s-badge">Заочно</a>
+                      <a href="#" class="s-badge">Очно-заочно</a>
+                      <a href="#" class="s-badge">Дистанционно</a>
+                    </div>
+                    <div class="educational__card-specialities">
+                      <div class="educational__card-specialities">
+                        Программное обеспечение вычислительных систем ·
+                        Математическое и программное обеспечение защиты информации ·
+                        Экономика · Организация педагогическо...
+                      </div>
+                    </div>
+                    <a class="link" href="#">Все 43 профиля</a>
+                  </div>
+                </div>
+              </div>
+              <div class="educational__card-info-line"></div>
+              <div class="educational__card-data">
+                <div class="educational__card-icons">
+                  <img src="img/dorm.svg" alt="dorm" class="educational__icon">
+                  <img src="img/gos.svg" alt="gos" class="educational__icon">
+                  <img src="img/war.svg" alt="war" class="educational__icon">
+                </div>
+                <div class="speciality__card-money">
+                  <div class="speciality__card-price">
+                    <div class="descriptor">Бюджетных мест</div>
+                    <div class="descriptor__num">260</div>
+                  </div>
+                  <div class="speciality__card-price">
+                    <div class="descriptor">Проходной балл</div>
+                    <div class="descriptor__num">от 152</div>
+                  </div>
+                  <div class="speciality__card-price">
+                    <div class="descriptor">Оплата в год</div>
+                    <div class="descriptor__num">от 90 000 ₽</div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- /.educational-card -->
+
+            <div class="educational__card swiper-slide">
+              <div class="educational__card-img">
+                <a href="#"> <img class="card-img" src="img/card-photo.png" alt="card-photo"> </a>
+              </div>
+              <div class="educational__card-info">
+                <div class="educational__card-text">
+                  <div class="educational__card-block">
+                    <div class="category">бакалавриат · 01.03.00 </div>
+                    <a class="h4" href="#">Прикладная математика и информатика</a>
+                    <div class="speciality-card-badges">
+                      <a href="#" class="s-badge">Очно</a>
+                      <a href="#" class="s-badge">Заочно</a>
+                      <a href="#" class="s-badge">Очно-заочно</a>
+                      <a href="#" class="s-badge">Дистанционно</a>
+                    </div>
+                    <div class="educational__card-specialities">
+                      <div class="educational__card-specialities">
+                        Программное обеспечение вычислительных систем ·
+                        Математическое и программное обеспечение защиты информации ·
+                        Экономика · Организация педагогическо...
+                      </div>
+                    </div>
+                    <a class="link" href="#">Все 43 профиля</a>
+                  </div>
+                </div>
+              </div>
+              <div class="educational__card-info-line"></div>
+              <div class="educational__card-data">
+                <div class="educational__card-icons">
+                  <img src="img/dorm.svg" alt="dorm" class="educational__icon">
+                  <img src="img/gos.svg" alt="gos" class="educational__icon">
+                  <img src="img/war.svg" alt="war" class="educational__icon">
+                </div>
+                <div class="speciality__card-money">
+                  <div class="speciality__card-price">
+                    <div class="descriptor">Бюджетных мест</div>
+                    <div class="descriptor__num">260</div>
+                  </div>
+                  <div class="speciality__card-price">
+                    <div class="descriptor">Проходной балл</div>
+                    <div class="descriptor__num">от 152</div>
+                  </div>
+                  <div class="speciality__card-price">
+                    <div class="descriptor">Оплата в год</div>
+                    <div class="descriptor__num">от 90 000 ₽</div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- /.educational-card -->
+
+            <div class="educational__card swiper-slide">
+              <div class="educational__card-img">
+                <a href="#"> <img class="card-img" src="img/card-photo.png" alt="card-photo"> </a>
+              </div>
+              <div class="educational__card-info">
+                <div class="educational__card-text">
+                  <div class="educational__card-block">
+                    <div class="category">бакалавриат · 01.03.00 </div>
+                    <a class="h4" href="#">Прикладная математика и информатика</a>
+                    <div class="speciality-card-badges">
+                      <a href="#" class="s-badge">Очно</a>
+                      <a href="#" class="s-badge">Заочно</a>
+                      <a href="#" class="s-badge">Очно-заочно</a>
+                      <a href="#" class="s-badge">Дистанционно</a>
+                    </div>
+                    <div class="educational__card-specialities">
+                      <div class="educational__card-specialities">
+                        Программное обеспечение вычислительных систем ·
+                        Математическое и программное обеспечение защиты информации ·
+                        Экономика · Организация педагогическо...
+                      </div>
+                    </div>
+                    <a class="link" href="#">Все 43 профиля</a>
+                  </div>
+                </div>
+              </div>
+              <div class="educational__card-info-line"></div>
+              <div class="educational__card-data">
+                <div class="educational__card-icons">
+                  <img src="img/dorm.svg" alt="dorm" class="educational__icon">
+                  <img src="img/gos.svg" alt="gos" class="educational__icon">
+                  <img src="img/war.svg" alt="war" class="educational__icon">
+                </div>
+                <div class="speciality__card-money">
+                  <div class="speciality__card-price">
+                    <div class="descriptor">Бюджетных мест</div>
+                    <div class="descriptor__num">260</div>
+                  </div>
+                  <div class="speciality__card-price">
+                    <div class="descriptor">Проходной балл</div>
+                    <div class="descriptor__num">от 152</div>
+                  </div>
+                  <div class="speciality__card-price">
+                    <div class="descriptor">Оплата в год</div>
+                    <div class="descriptor__num">от 90 000 ₽</div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- /.educational-card -->
+
+            <div class="educational__card swiper-slide">
+              <div class="educational__card-img">
+                <a href="#"> <img class="card-img" src="img/card-photo.png" alt="card-photo"> </a>
+              </div>
+              <div class="educational__card-info">
+                <div class="educational__card-text">
+                  <div class="educational__card-block">
+                    <div class="category">бакалавриат · 01.03.00 </div>
+                    <a class="h4" href="#">Прикладная математика и информатика</a>
+                    <div class="speciality-card-badges">
+                      <a href="#" class="s-badge">Очно</a>
+                      <a href="#" class="s-badge">Заочно</a>
+                      <a href="#" class="s-badge">Очно-заочно</a>
+                      <a href="#" class="s-badge">Дистанционно</a>
+                    </div>
+                    <div class="educational__card-specialities">
+                      <div class="educational__card-specialities">
+                        Программное обеспечение вычислительных систем ·
+                        Математическое и программное обеспечение защиты информации ·
+                        Экономика · Организация педагогическо...
+                      </div>
+                    </div>
+                    <a class="link" href="#">Все 43 профиля</a>
+                  </div>
+                </div>
+              </div>
+              <div class="educational__card-info-line"></div>
+              <div class="educational__card-data">
+                <div class="educational__card-icons">
+                  <img src="img/dorm.svg" alt="dorm" class="educational__icon">
+                  <img src="img/gos.svg" alt="gos" class="educational__icon">
+                  <img src="img/war.svg" alt="war" class="educational__icon">
+                </div>
+                <div class="speciality__card-money">
+                  <div class="speciality__card-price">
+                    <div class="descriptor">Бюджетных мест</div>
+                    <div class="descriptor__num">260</div>
+                  </div>
+                  <div class="speciality__card-price">
+                    <div class="descriptor">Проходной балл</div>
+                    <div class="descriptor__num">от 152</div>
+                  </div>
+                  <div class="speciality__card-price">
+                    <div class="descriptor">Оплата в год</div>
+                    <div class="descriptor__num">от 90 000 ₽</div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- /.educational-card -->
+          </div>
+          <div class="swiper-pagination"></div>
+          <button class="specialty__more">Показать все специальности</button>
+
+
+        </div> <!-- /.specialty -->
+
+        <div class="about__university">
+          <div class="university__subtitle">
+            <h2 class="text__main">Об университете</h2>
+            <p class="specialty__text-name">Об МГТУ им. Н. Э. Баумана</p>
+          </div>
+
+          <div class="gallery">
+            <div class="gallery__photo-col1">
+              <a data-fancybox="gallery" href="img/img1.jpg"><img src="img/img1.jpg" alt="img"></a>
+            </div>
+            <div class="gallery__photo-col2">
+              <div class="col2__top">
+                <a data-fancybox="gallery" href="img/img2.jpg"><img class="gallery-img" src="img/img2.jpg" alt="img"></a>
+                <a data-fancybox="gallery" href="img/img3.jpg"><img class="gallery-img1" src="img/img3.jpg" alt="img"></a>
+              </div>
+              <div class="col2__bottom">
+                <a data-fancybox="gallery" href="img/img4.jpg"><img class="gallery-img" src="img/img4.jpg" alt="img"></a>
+                <a data-fancybox="gallery" href="img/img5.jpg"><img class="gallery-img2" src="img/img5.jpg" alt="img"></a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="university__description">
+            <p class="description__text description__text-top">
+              Московский университет ― это один из самых старейших университетов России, был основан в 1755 году.
+              Университет известен во мире и занимает лидирующие места в рейтингах вузов самых различных направлений
+            </p>
+            <p class="description__text description__text-bottom">
+              В 2008 году он получил награду «Европейское качество» «за стремление достичь высокого качества образовательных 
+              услуг в соответствии с международными стандартами». МГТУ им. Н. Э. Баумана в течение более чем 14 лет является 
+              головным вузом Ассоциации технических университетов, в состав которой входят более 130 российских университетов.
+            </p>
+            <button class="university__description-more">Развернуть</button>
+          </div>
+
+
+
+
+        </div> <!--/.about__university -->
+          
+        </div>
+
+      </div> <!-- /.information__main -->
+
+    </div> <!-- /.information -->
+
+  </div> <!-- /.container -->
+</div> <!-- /.page -->
+        <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-xl-2">
+        <div class="footer-block">
+          <div class="btn-text mb-3"> Студентам </div>
+          <ul class="footer-menu">
+            <li><a href="https://studika.ru/moskva/vuzy">вузы</a></li>
+            <li><a href="https://studika.ru/moskva/kolledzhi">Колледжи</a></li>
+            <li><a href="https://studika.ru/moskva/tehnikumy">Техникумы</a></li>
+            <li><a href="https://studika.ru/moskva/uchilischa">Училища</a></li>
+            <li> <a href="https://studika.ru/moskva/specialnosti">Специальности</a> </li>
+            <li> <a href="https://studika.ru/otzyvi">Отзывы</a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3 order-lg-first">
+        <div class="footer-block mb-xl-4"> <img src="img/logo.svg" alt=""
+            class="footer-logo mb-3" data-pagespeed-url-hash="88811415"
+            onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+          <ul class="footer-menu">
+            <li> <a href="https://studika.ru/kontakti">Обратная связь</a> </li>
+          </ul>
+          <div class="soc-icons d-flex"> <a href="https://vk.com/studika" target="_blank" class="soc-icon soc-vk"><i
+                class="fa fa-vk"></i></a> </div>
+          <div class="mt-3 mb-4"> <a href="mailto:ooo.document@yandex.ru"
+              class="footer-email">ooo.document@yandex.ru</a> </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4 order-lg-last">
+        <div class="footer-block">
+          <div class="btn-text mb-3"> Популярные вузы </div>
+          <div class="footer-popular">
+            <div class="footer-edu-row d-flex align-items-center mb-4">
+              <div class="edu-small"> <img class="edu-small-logo" height="32" width="32"
+                  src="https://studika.ru/uploads/media/17489/conversions/32x32xb1ejv-logo_small.jpg.pagespeed.ic.aN1LpygpzH.webp"
+                  alt="" data-pagespeed-url-hash="2661165165"
+                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> <img class="edu-small-image"
+                  width="68"
+                  src="https://studika.ru/uploads/media/20258/conversions/68xNxzdanie-ursei-header_image.jpg.pagespeed.ic.e1FYZxj-s7.webp"
+                  alt="Академический колледж" data-pagespeed-url-hash="1965815761"
+                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> </div>
+              <div class="edu-small-name"> <a href="https://studika.ru/chelyabinsk/akademicheskiy-kolledzh-1">ЧПОУ
+                  "Академический колледж"</a> <i class="fa fa-check-circle edu-confirm"></i> </div>
+            </div>
+            <div class="footer-edu-row d-flex align-items-center mb-4">
+              <div class="edu-small"> <img class="edu-small-logo"
+                  src="data:image/webp;base64,UklGRtIBAABXRUJQVlA4IMYBAABQCQCdASogACAAPp1Em0qlo6IhqAqosBOJbACdMoMpLIBz//nwY9VVgmQGKCnBQLJmnmQ1A/1SULylNsCqE2rnLUMwu3Z6icN9GKvM94+57y264AD+/K3Pdt3M5sVaKOxptuFao2tdxDs+fvzTr1iccI34b2/wlB4Fs6rfDTv4Itf9Vyq+cOAmszykBWfNU6Sdf/bxP/GHz3wZfD7AqPl9GF0ObAfUS/TrF37WQg0VtIl/SjNYxbvbf1tlf55odCeba4qUXENJFRm5hB0x4ykdMBvlnWtYqHUQZ0lwkuSXX1dnM23mGlQ8t2SpkB3Cx7rczTCyN9ZFmqeoE5ISG4UQHiKnnIrZjPcPA+rQvQc/TD2Ik2Q/1NMTs/BHqvU2R4ZWXF5V2D3ytSyYf99W0m5n1KsBzBmorkTj6kTGtk7LKAglZtBzsLnRIa0/tfVQ9HeBFFHZgSrWv3RCZ/KR/8E06QtsfYOUWRfqpAYJ8J36FsZQb5CuvE90IJHrycumWlGMpNJIyGioxfm6io+x/Jo+IfNAoQrE62CM77atFC47zkNqt/bflMnVrbhJ0ajwGqmFeY326iisW91zMQ4nG1tVdxw130AA"
+                  alt="" data-pagespeed-url-hash="3216479702"
+                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> <img class="edu-small-image"
+                  width="68"
+                  src="https://studika.ru/uploads/media/9546/conversions/68xNx1-header_image.jpg.pagespeed.ic.CXb6YNiX_B.webp"
+                  alt="ОЧУ ВО «ММА»" data-pagespeed-url-hash="2989039149"
+                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> </div>
+              <div class="edu-small-name"> <a
+                  href="https://studika.ru/moskva/moskovskaya-mezhdunarodnaya-akademiya">Московская Международная
+                  Академия</a> <i class="fa fa-check-circle edu-confirm"></i> </div>
+            </div>
+            <div class="footer-edu-row d-flex align-items-center mb-4">
+              <div class="edu-small"> <img class="edu-small-logo" height="32" width="32"
+                  src="https://studika.ru/uploads/media/403/conversions/32x32x6-logo_small.jpg.pagespeed.ic.MeA-mbe-zC.webp"
+                  alt="" data-pagespeed-url-hash="3025333969"
+                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> <img class="edu-small-image"
+                  width="68"
+                  src="https://studika.ru/uploads/media/401/conversions/68xNx66-header_image.jpg.pagespeed.ic.xWZfQgZzQt.webp"
+                  alt="АУП" data-pagespeed-url-hash="1012928251"
+                  onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> </div>
+              <div class="edu-small-name"> <a href="https://studika.ru/moskva/aup">Академия управления и
+                  производства</a> <i class="fa fa-check-circle edu-confirm"></i> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3">
+        <div class="footer-block">
+          <div class="btn-text mb-3"> Учебным заведениям </div>
+          <ul class="footer-menu">
+            <li> <a href="https://studika.ru/reklama">Размещение рекламы</a> </li>
+            <li> <a href="https://studika.ru/uchebnym-zavedeniyam">Добавить учебное заведение</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.min.js"></script>
+        <script src="js/vendor.min.js"></script>
+        <script src="js/main.min.js"></script>
+    </body>
+</html>
